@@ -1,0 +1,17 @@
+# Environment
+.env
+.venv
+venv/
+
+# macOS
+.DS_Store
+
+# Bazel
+bazel-*
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# Other
+temporary/
