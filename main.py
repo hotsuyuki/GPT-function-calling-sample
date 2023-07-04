@@ -6,7 +6,7 @@ import os
 from typing import Union
 
 
-class FunctionCallGPT:
+class FunctionCallingGPT:
     def __init__(self, model: str = "gpt-3.5-turbo", is_verbose: bool = False) -> None:
         self.model = model
         self.is_verbose = is_verbose
@@ -90,16 +90,16 @@ class FunctionCallGPT:
 
 
 if __name__ == "__main__":
-    function_call_gpt = FunctionCallGPT(model="gpt-3.5-turbo-0613", is_verbose=True)
+    function_calling_gpt = FunctionCallingGPT(model="gpt-3.5-turbo-0613", is_verbose=True)
 
     data_path = os.path.join(os.getenv("PWD"), "image", "savanna.jpg")
 
     user_content = "Can you count how many objects in this picture? data_path: " + data_path
-    answer = function_call_gpt(user_content)
+    answer = function_calling_gpt(user_content)
     print(f"{answer = }")
     print()
 
     user_content = "Can you describe this picture? data_path: " + data_path
-    answer = function_call_gpt(user_content)
+    answer = function_calling_gpt(user_content)
     print(f"{answer = }")
     print()
